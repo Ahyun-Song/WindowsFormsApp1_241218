@@ -17,6 +17,31 @@ namespace WindowsFormsApp1_241218
             InitializeComponent();
 
             bool userInput = true;
+
+            if (PlayGame(userInput))
+            {
+                textBox_print.Text = "승리";
+            }
+            else
+            {
+                textBox_print.Text = "패배";
+            }
+        }
+
+        public bool PlayGame(bool userInput)
+        {
+            Random random = new Random();
+            int coinTossResult = random.Next(2);
+            bool randomBool = (coinTossResult == 1);
+
+            return userInput == randomBool;
+        }
+
+        /*public Form2()
+        {
+            InitializeComponent();
+
+            bool userInput = true;
             bool result = PlayGame(userInput);
         }
 
@@ -26,16 +51,16 @@ namespace WindowsFormsApp1_241218
             int coinTossResult = random.Next(2);
             bool randomBool = (coinTossResult == 1);
 
-            if(userInput == randomBool)
+            if (userInput == randomBool)
             {
-               textBox_print.Text = "승리";
+                textBox_print.Text = "승리";
             }
             else
             {
-               textBox_print.Text = "패배";
+                textBox_print.Text = "패배";
             }
 
             return userInput == randomBool;
-        }
+        }*/
     }
 }
