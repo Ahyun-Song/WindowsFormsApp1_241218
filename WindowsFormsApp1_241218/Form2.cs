@@ -18,6 +18,9 @@ namespace WindowsFormsApp1_241218
 
             bool userInput = true;
             bool result = PlayGame(userInput);
+
+            textBox_print.Text = "승리";
+            textBox_print.Text = "패배";
         }
 
         public bool PlayGame(bool userInput)
@@ -28,11 +31,11 @@ namespace WindowsFormsApp1_241218
 
             if(userInput == randomBool)
             {
-                textBox_print.Text = "승리";
+               // textBox_print.Text = "승리";
             }
             else
             {
-                textBox_print.Text = "패배";
+               // textBox_print.Text = "패배";
             }
 
             return userInput == randomBool;
